@@ -39,13 +39,12 @@ aside {
   align-items: center;
 }
 
-.menu-single-item img {
+.menu-single-item svg {
   width: 20px;
-  height: 20px;
 }
 
 .menu-single-item span {
-  padding-left: 3px;
+  padding-left: 5px;
   height: 20px;
 }
 
@@ -53,14 +52,19 @@ aside {
   display: flex;
   padding: 8px 0;
   align-items: center;
-  justify-content: space-between;
   cursor: pointer;
 }
 
+.menu-collapse-item svg {
+  min-width: 20px;
+}
+
 .menu-collapse-item a {
+  width: 195px;
   font-size: 14px;
   text-decoration: none;
   color: black;
+  padding-left: 5px;
 }
 
 @media (max-width: 1250px) {

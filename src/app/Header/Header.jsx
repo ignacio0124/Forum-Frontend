@@ -1,8 +1,7 @@
 import './Header.css';
-import Image from 'next/image';
-import IconSearch from '../../../public/icon/icon-search.png';
-import IconLanguage from '../../../public/icon/icon-language.png';
-import IconAvatar from '../../../public/icon/icon-avatar.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMagnifyingGlass, faEarthAmericas, faUser } from '@fortawesome/free-solid-svg-icons';
+import '@fortawesome/fontawesome-svg-core/styles.css';
 
 export default function Header() {
   return (
@@ -10,17 +9,17 @@ export default function Header() {
       <a href="#" className="logo">WellW</a>
       <a href="#" className="logo-mobile">W</a> {/*手機版*/}
       <div className="search">
-        <Image src={IconSearch} alt="search"/>
+        <FontAwesomeIcon icon={faMagnifyingGlass} size="lg" />
         <input type="text" placeholder="搜尋 WellW"/>
       </div>
       <div className="header-right">
         <div>
-          <Image src={IconLanguage} alt="language"></Image>
+          <FontAwesomeIcon icon={faEarthAmericas} size="lg" />
           <p>▼</p>
         </div>
         <button>下載APP</button>
         <div>
-          <Image src={IconAvatar} alt="avatar"></Image>
+          <FontAwesomeIcon icon={faUser} size="lg" />
           <i className="arrow down"></i>
         </div>
       </div>

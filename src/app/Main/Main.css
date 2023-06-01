@@ -40,12 +40,16 @@ main {
   display: flex;
   padding: 12px 16px 12px 6px;
   align-items: center;
-  justify-content: space-between;
   cursor: pointer;
   border-top: 1px solid #D0D0D0;
 }
 
+.main-side-topic svg {
+  width: 20px;
+}
+
 .main-side-topic a {
+  padding-left: 5px;
   text-decoration: none;
   color: black;
 }
@@ -101,8 +105,12 @@ main {
   padding: 3px;
 }
 
-.vote a {
+.vote svg {
   cursor: pointer;
+}
+
+.vote div {
+  padding: 4px 0;
 }
 
 .post {
@@ -156,17 +164,15 @@ main {
   align-items: center;
 }
 
-.post-footer img {
-  height: 20px;
-  width: 20px;
-  margin-right: 1px;
-}
-
 .post-footer div {
   display: flex;
   align-items: center;
   margin-right: 10px;
   cursor: pointer;
+}
+
+.post-footer span {
+  margin-left: 2px;
 }
 
 @media (max-width: 1250px) {

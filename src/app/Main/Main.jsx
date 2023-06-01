@@ -1,8 +1,21 @@
 import './Main.css';
-import Image from 'next/image';
-import IconComment from "../../../public/icon/icon-comment.png";
-import IconShare from "../../../public/icon/icon-share.png";
-import IconSave from "../../../public/icon/icon-save.png";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faComments,
+  faShare,
+  faBasketball,
+  faBaseball,
+  faBookmark as faBookmarkSolid,
+  faThumbsUp as faThumbsUpSolid,
+  faThumbsDown as faThumbsDownSolid
+} from '@fortawesome/free-solid-svg-icons';
+import {
+  faBookmark as faBookmarkRegular,
+  faThumbsUp as faThumbsUpRegular,
+  faThumbsDown as faThumbsDownRegular
+} from '@fortawesome/free-regular-svg-icons';
+import {faBitcoin, faEthereum} from '@fortawesome/free-brands-svg-icons';
+import '@fortawesome/fontawesome-svg-core/styles.css';
 
 export default function Main() {
   return (
@@ -11,9 +24,9 @@ export default function Main() {
         <div className="main-center">
           <div className="main-center-flex">
             <div className="vote">
-              <a>⇧</a>
+              <FontAwesomeIcon icon={faThumbsUpRegular} size="lg" />
               <div>2.1k</div>
-              <a>⇩</a>
+              <FontAwesomeIcon icon={faThumbsDownRegular} size="lg" />
             </div>
             <div className="post">
               <button>加入</button>
@@ -30,15 +43,15 @@ export default function Main() {
               <div className="post-content">這邊是內容呈現的部分<br/>測試換行<br/>就是要換行<br/>繼續換行<br/>持續換行</div>
               <div className="post-footer">
                 <div>
-                  <Image src={IconComment} alt="comment"/>
+                  <FontAwesomeIcon icon={faComments} size="lg" />
                   <span>188條評論</span>
                 </div>
                 <div>
-                  <Image src={IconShare} alt="share"/>
+                  <FontAwesomeIcon icon={faShare} size="lg" />
                   <span>分享</span>
                 </div>
                 <div>
-                  <Image src={IconSave} alt="save"/>
+                  <FontAwesomeIcon icon={faBookmarkRegular} size="lg" />
                   <span>收藏</span>
                 </div>
               </div>
@@ -46,9 +59,9 @@ export default function Main() {
           </div>
           <div className="main-center-flex">
             <div className="vote">
-              <a>⇧</a>
+              <FontAwesomeIcon icon={faThumbsUpRegular} size="lg" />
               <div>2.1k</div>
-              <a>⇩</a>
+              <FontAwesomeIcon icon={faThumbsDownRegular} size="lg" />
             </div>
             <div className="post">
               <button>加入</button>
@@ -65,15 +78,15 @@ export default function Main() {
               <div className="post-content">這邊是內容呈現的部分<br/>測試換行<br/>就是要換行<br/>繼續換行<br/>持續換行</div>
               <div className="post-footer">
                 <div>
-                  <Image src={IconComment} alt="comment"/>
+                  <FontAwesomeIcon icon={faComments} size="lg" />
                   <span>188條評論</span>
                 </div>
                 <div>
-                  <Image src={IconShare} alt="share"/>
+                  <FontAwesomeIcon icon={faShare} size="lg" />
                   <span>分享</span>
                 </div>
                 <div>
-                  <Image src={IconSave} alt="save"/>
+                  <FontAwesomeIcon icon={faBookmarkRegular} size="lg" />
                   <span>收藏</span>
                 </div>
               </div>
@@ -81,9 +94,9 @@ export default function Main() {
           </div>
           <div className="main-center-flex">
             <div className="vote">
-              <a>⇧</a>
+              <FontAwesomeIcon icon={faThumbsUpRegular} size="lg" />
               <div>2.1k</div>
-              <a>⇩</a>
+              <FontAwesomeIcon icon={faThumbsDownRegular} size="lg" />
             </div>
             <div className="post">
               <button>加入</button>
@@ -100,15 +113,15 @@ export default function Main() {
               <div className="post-content">這邊是內容呈現的部分<br/>測試換行<br/>就是要換行<br/>繼續換行<br/>持續換行</div>
               <div className="post-footer">
                 <div>
-                  <Image src={IconComment} alt="comment"/>
+                  <FontAwesomeIcon icon={faComments} size="lg" />
                   <span>188條評論</span>
                 </div>
                 <div>
-                  <Image src={IconShare} alt="share"/>
+                  <FontAwesomeIcon icon={faShare} size="lg" />
                   <span>分享</span>
                 </div>
                 <div>
-                  <Image src={IconSave} alt="save"/>
+                  <FontAwesomeIcon icon={faBookmarkRegular} size="lg" />
                   <span>收藏</span>
                 </div>
               </div>
@@ -116,9 +129,9 @@ export default function Main() {
           </div>
           <div className="main-center-flex">
             <div className="vote">
-              <a>⇧</a>
+              <FontAwesomeIcon icon={faThumbsUpRegular} size="lg" />
               <div>2.1k</div>
-              <a>⇩</a>
+              <FontAwesomeIcon icon={faThumbsDownRegular} size="lg" />
             </div>
             <div className="post">
               <button>加入</button>
@@ -135,15 +148,15 @@ export default function Main() {
               <div className="post-content">這邊是內容呈現的部分<br/>測試換行<br/>就是要換行<br/>繼續換行<br/>持續換行</div>
               <div className="post-footer">
                 <div>
-                  <Image src={IconComment} alt="comment"/>
+                  <FontAwesomeIcon icon={faComments} size="lg" />
                   <span>188條評論</span>
                 </div>
                 <div>
-                  <Image src={IconShare} alt="share"/>
+                  <FontAwesomeIcon icon={faShare} size="lg" />
                   <span>分享</span>
                 </div>
                 <div>
-                  <Image src={IconSave} alt="save"/>
+                  <FontAwesomeIcon icon={faBookmarkRegular} size="lg" />
                   <span>收藏</span>
                 </div>
               </div>
@@ -151,9 +164,9 @@ export default function Main() {
           </div>
           <div className="main-center-flex">
             <div className="vote">
-              <a>⇧</a>
+              <FontAwesomeIcon icon={faThumbsUpRegular} size="lg" />
               <div>2.1k</div>
-              <a>⇩</a>
+              <FontAwesomeIcon icon={faThumbsDownRegular} size="lg" />
             </div>
             <div className="post">
               <button>加入</button>
@@ -170,15 +183,15 @@ export default function Main() {
               <div className="post-content">這邊是內容呈現的部分<br/>測試換行<br/>就是要換行<br/>繼續換行<br/>持續換行</div>
               <div className="post-footer">
                 <div>
-                  <Image src={IconComment} alt="comment"/>
+                  <FontAwesomeIcon icon={faComments} size="lg" />
                   <span>188條評論</span>
                 </div>
                 <div>
-                  <Image src={IconShare} alt="share"/>
+                  <FontAwesomeIcon icon={faShare} size="lg" />
                   <span>分享</span>
                 </div>
                 <div>
-                  <Image src={IconSave} alt="save"/>
+                  <FontAwesomeIcon icon={faBookmarkRegular} size="lg" />
                   <span>收藏</span>
                 </div>
               </div>
@@ -186,9 +199,9 @@ export default function Main() {
           </div>
           <div className="main-center-flex">
             <div className="vote">
-              <a>⇧</a>
+              <FontAwesomeIcon icon={faThumbsUpRegular} size="lg" />
               <div>2.1k</div>
-              <a>⇩</a>
+              <FontAwesomeIcon icon={faThumbsDownRegular} size="lg" />
             </div>
             <div className="post">
               <button>加入</button>
@@ -205,15 +218,15 @@ export default function Main() {
               <div className="post-content">這邊是內容呈現的部分<br/>測試換行<br/>就是要換行<br/>繼續換行<br/>持續換行</div>
               <div className="post-footer">
                 <div>
-                  <Image src={IconComment} alt="comment"/>
+                  <FontAwesomeIcon icon={faComments} size="lg" />
                   <span>188條評論</span>
                 </div>
                 <div>
-                  <Image src={IconShare} alt="share"/>
+                  <FontAwesomeIcon icon={faShare} size="lg" />
                   <span>分享</span>
                 </div>
                 <div>
-                  <Image src={IconSave} alt="save"/>
+                  <FontAwesomeIcon icon={faBookmarkRegular} size="lg" />
                   <span>收藏</span>
                 </div>
               </div>
@@ -222,22 +235,22 @@ export default function Main() {
         </div>
         <div className="main-side">
           <div className="main-side-topic">
-            <p>熱門看板</p>
+            <p>熱門主題</p>
             <div>
-              <a href="#">🥗 飲食</a>
-              <i className="arrow down"></i>
+              <FontAwesomeIcon icon={faBasketball} size="lg" />
+              <a href="#">籃球</a>
             </div>
             <div>
-              <a href="#">👪 家庭</a>
-              <i className="arrow down"></i>
+              <FontAwesomeIcon icon={faBaseball} size="lg" />
+              <a href="#">棒球</a>
             </div>
             <div>
-              <a href="#">🐈 寵物</a>
-              <i className="arrow down"></i>
+              <FontAwesomeIcon icon={faBitcoin} size="lg" />
+              <a href="#">比特幣</a>
             </div>
             <div>
-              <a href="#">💼 求職</a>
-              <i className="arrow down"></i>
+              <FontAwesomeIcon icon={faEthereum} size="lg" />
+              <a href="#">以太幣</a>
             </div>
           </div>
           <div className="main-side-footer">
