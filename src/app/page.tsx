@@ -1,6 +1,6 @@
-import Sidebar from "./Sidbar/Sidebar.jsx";
-import Header from "./Header/Header.jsx";
-import Main from "./Main/Main.jsx";
+import Sidebar from "./Sidbar/Sidebar";
+import Header from "./Header/Header";
+import Main from "./Main/Main";
 
 export default function Home() {
   return (
