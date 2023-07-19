@@ -1,29 +1,32 @@
 'use client'
 
 import './Sidebar.css';
+import { IconMapping } from "@/app/Library/Icon";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouse, faFire, faPersonWalking, faCoins, faStar as faStarSolid } from '@fortawesome/free-solid-svg-icons';
+import { faHouse, faFire, faStar as faStarSolid } from '@fortawesome/free-solid-svg-icons';
 import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons';
 import '@fortawesome/fontawesome-svg-core/styles.css';
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { getFamilies, setFavorite } from "@/app/Sidbar/SidebarAction";
 
 export default function Sidebar() {
-  const menusArray = [
-    {
-      name: "體育",
-      icon: faPersonWalking,
-      star: faStarRegular,
-      isFavorite: false
-    },
-    {
-      name: "區塊鏈",
-      icon: faCoins,
-      star: faStarRegular,
-      isFavorite: false
-    }
-  ];
-  const [menus, setCurrentStarIcon] = useState(menusArray);
-  const favoriteClick = async (index: number) => {
+  const [menus, setCurrentStarIcon] = useState<any[]>([]);
+
+  useEffect(() => {
+    const data = getFamilies();
+
+    data.then(response => {
+      for (let i = 0; i < response.length; i++ ) {
+        response[i].isFavorite ? response[i].star = faStarSolid : response[i].star = faStarRegular;
+      }
+
+      setCurrentStarIcon(response);
+    });
+  }, []);
+
+  const favoriteClick = async (index: number, familyId: number) => {
+    await setFavorite(familyId);
+
     const updateMenus = [...menus];
     updateMenus[index].star = updateMenus[index].isFavorite ? faStarRegular : faStarSolid;
     updateMenus[index].isFavorite = !updateMenus[index].isFavorite;
@@ -47,18 +50,18 @@ export default function Sidebar() {
             {menus.map((menu, index) => {
               if (menu.isFavorite) {
                 return (<div key={index} className="menu-collapse-item">
-                  <FontAwesomeIcon icon={menu.icon} size="lg"/>
+                  <FontAwesomeIcon icon={IconMapping(menu.name)} size="lg"/>
                   <a href="#">{menu.name}</a>
-                  <FontAwesomeIcon icon={menu.star} size="lg" onClick={() => favoriteClick(index)}/>
+                  <FontAwesomeIcon icon={menu.star} size="lg" onClick={() => favoriteClick(index, menu.id)}/>
                 </div>);
               }
             })}
           <div className="menu">討論區</div>
             {menus.map((menu, index) => (
               <div key={index} className="menu-collapse-item">
-                <FontAwesomeIcon icon={menu.icon} size="lg" />
+                <FontAwesomeIcon icon={IconMapping(menu.name)} size="lg" />
                 <a href="#">{menu.name}</a>
-                <FontAwesomeIcon icon={menu.star} size="lg" onClick={() => favoriteClick(index)} />
+                <FontAwesomeIcon icon={menu.star} size="lg" onClick={() => favoriteClick(index, menu.id)} />
               </div>
             ))}
         </div>
